@@ -1,4 +1,5 @@
 <b>Using Command Prompt to enumerate objects in Active Directory. </b>
+
 Every Windows computer will have Command Prompt already available and some of these commands can be run on any workstation connected to the domain without admin permissions. This allows you to be able to create list of users, groups, workstations, etc. on the domain without having to install any tools. 
 1. Using NET USER to generate a list of user accounts.
 In a Command Prompt window simply run the command NET USER. This will generate a list of all local accounts on a machine. Keep in mind these are LOCAL accounts. They exist only on the workstation the command was run on. They do no exist in the Domain Controller. It is still important to take count of what exists locally on a machine as a local admin can still make significant changes to a workstation. You can find more information about each account by running the command NET USER <Account name>. This will give information such as any groups it belongs to (e.g. Administrators) as well as if it is currently enabled.
